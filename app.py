@@ -59,15 +59,15 @@ st.write("Note: Tatsuro Yamashita's songs are not available on conventional musi
 
 db = load_database()
 
-audio_clip = st.audio_input("Record 10-20s of the song you want to match")
+audio_clip = st.audio_input("Record 15s of the song you want to match")
 
 if audio_clip:
     audio, sr = librosa.load(audio_clip, sr=None, mono=True)
     sample_hashes = fingerprint(audio, sr)
 
     match, score = match_sample(sample_hashes, db)
-    if match:
+    if 4000000 < score < 5000000:
         st.success(f"🎶 Matched with: {match} (Score: {score})")
     else:
-        st.warning("No match found.")
+        st.warning(f"No match found. Score: {score}")
 
