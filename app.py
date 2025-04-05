@@ -54,18 +54,8 @@ def match_sample(sample_hashes, database):
     return None, 0
 
 st.title("🎵 Song Matcher Prototype")
-st.write("Hello! Welcome to this song matcher prototype. This webapp has been trained on Tatsuro Yamashita's 1982 album \"For You\". Due to memory limits, only the first 20s of each song are processed in the database. Please record a short clip up to 20s of the beginning of the song for this to work properly.")
-st.markdown(''' ### The tracklist for this album is as follows:
-    1. Sparkle
-    2. Music Book
-    3. Morning Glory
-    4. Futari
-    5. Loveland, Island
-    6. Love Talkin' (Honey It's You)
-    7. Hey Reporter!
-    8. Your Eyes 
-''')
-st.write("Note: Tatsuro Yamashita's songs are not available on conventional music streaming platforms, but you can find them on YouTube. Here is the link to \"[Sparkle](https://youtu.be/pqobRu9aR3M?si=V4jT-XLEO5_cIP_5)\", my favorite song on the album for you to test out.")
+st.write("Hello! Welcome to this song matcher prototype. This webapp has been trained on Tatsuro Yamashita's 1982 song \"Sparkle\". Due to memory limits, only the first 20s of each song are processed in the database. Please record a short clip up to 20s of the beginning of the song for this to work properly. At first, I tried training on the whole album but the kernel kept crashing. With one song alone, the pkl file is already around 400mb, so training on the whole album is quite unfeasible at this rate, sorry!")
+st.write("Note: Tatsuro Yamashita's songs are not available on conventional music streaming platforms, but you can find them on YouTube. Here is the link to \"[Sparkle](https://youtu.be/pqobRu9aR3M?si=V4jT-XLEO5_cIP_5)\"")
 
 db = load_database()
 
