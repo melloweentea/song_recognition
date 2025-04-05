@@ -54,7 +54,7 @@ def match_sample(sample_hashes, database):
     return None, 0
 
 st.title("🎵 Song Matcher Prototype")
-st.write("Hello! Welcome to this song matcher prototype. This webapp has been trained on Tatsuro Yamashita's 1982 song \"Sparkle\". Due to memory limits, only the first 20s of each song are processed in the database. Please record a short clip up to 20s of the beginning of the song for this to work properly. At first, I tried training on the whole album but the kernel kept crashing. With one song alone, the pkl file is already around 400mb, so training on the whole album is quite unfeasible at this rate, sorry!")
+st.write("Hello! Welcome to this song matcher prototype. This webapp has been trained on Tatsuro Yamashita's 1982 song \"Sparkle\". Due to memory limits, only the first 20s of the song is processed in the database. Please record a short clip up to 20s of the beginning of the song for this to work properly. At first, I tried training on the whole album but the kernel kept crashing. With one song alone, the pkl file is already around 400mb, so training on the whole album is quite unfeasible at this rate, sorry!")
 st.write("Note: Tatsuro Yamashita's songs are not available on conventional music streaming platforms, but you can find them on YouTube. Here is the link to \"[Sparkle](https://youtu.be/pqobRu9aR3M?si=V4jT-XLEO5_cIP_5)\"")
 
 db = load_database()
